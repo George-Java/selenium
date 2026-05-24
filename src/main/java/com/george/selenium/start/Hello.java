@@ -36,9 +36,11 @@ public class Hello {
         el = wd.findElement(By.id("go"));
         el.click();
 
-        el = wd.findElement(By.id("1"));
-        WebElement childElement = el.findElement(By.className("name"));
-        System.out.println(childElement.getText());
+        //By.cssSelector("css选择器"):依靠CSS选择器定位元素
+        el = wd.findElement(By.cssSelector(".result-item > .name"));
+        System.out.println(el.getText());
+        System.out.println(el.getAttribute("outerHTML"));
+        System.out.println(el.getAttribute("innerHTML"));
 
         /*wd.get("https://www.byhy.net/cdn2/files/selenium/sample1.html");
         List<WebElement> animals = wd.findElements(By.className("animal"));
