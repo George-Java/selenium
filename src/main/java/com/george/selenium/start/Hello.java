@@ -23,21 +23,21 @@ public class Hello {
         //wait()工具方法,详见SeleniumUtil.java
         SeleniumUtil.wait(wd, 10);
 
-        WebElement element;
+        WebElement el;
 
-        element = wd.findElement(By.id("kw"));
+        el = wd.findElement(By.id("kw"));
         //清空文本框
-        element.clear();
+        el.clear();
         //sendKeys("文本内容"),向文本框中输入内容
-        element.sendKeys("通讯");
+        el.sendKeys("通讯");
         //getAttribute("属性名"),获取某html标签的某属性的值
-        System.out.println(element.getAttribute("placeholder"));
+        System.out.println(el.getAttribute("placeholder"));
 
-        element = wd.findElement(By.id("go"));
-        element.click();
+        el = wd.findElement(By.id("go"));
+        el.click();
 
-        element = wd.findElement(By.id("1"));
-        WebElement childElement = element.findElement(By.className("name"));
+        el = wd.findElement(By.id("1"));
+        WebElement childElement = el.findElement(By.className("name"));
         System.out.println(childElement.getText());
 
         /*wd.get("https://www.byhy.net/cdn2/files/selenium/sample1.html");
