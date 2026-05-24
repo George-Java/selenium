@@ -7,14 +7,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.Scanner;
 
-/*
- *ClassName: Hello
- *Package：com.george.selenium.start
- *Description：
- *@Author: George
- *@CreationDate: 2026-05-24-14:36
- *@Version 1.0
- */
 public class Hello {
     public static void main(String[] args) {
         ChromeDriver wd = new ChromeDriver();
@@ -35,12 +27,6 @@ public class Hello {
 
         el = wd.findElement(By.id("go"));
         el.click();
-
-        //By.cssSelector("css选择器"):依靠CSS选择器定位元素
-        el = wd.findElement(By.cssSelector(".result-item > .name"));
-        System.out.println(el.getText());
-        System.out.println(el.getAttribute("outerHTML"));
-        System.out.println(el.getAttribute("innerHTML"));
 
         /*wd.get("https://www.byhy.net/cdn2/files/selenium/sample1.html");
         List<WebElement> animals = wd.findElements(By.className("animal"));
