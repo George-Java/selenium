@@ -27,7 +27,10 @@ public class Hello {
 
         wd.get("https://www.byhy.net/cdn2/files/selenium/sample1.html");
         List<WebElement> animals = wd.findElements(By.className("animal"));
-        animals.forEach(animal -> System.out.println(animal.getText()));
+        animals.forEach(animal -> {
+            WebElement span = animal.findElement(By.tagName("span"));
+            System.out.println(span.getText());
+        });
 
         System.out.println("请输入回车结束");
         Scanner sc = new Scanner(System.in);
