@@ -28,7 +28,7 @@ public class CssSelector {
         Scanner sc = new Scanner(System.in);
         sc.nextLine();
 
-        wd.quit();
         sc.close();
+        wd.quit();
     }
 }
