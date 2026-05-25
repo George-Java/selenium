@@ -8,14 +8,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.Scanner;
 
-/*
- *ClassName: SwitchWindow
- *Package：com.george.selenium.start
- *Description：
- *@Author: George
- *@CreationDate: 2026-05-25-00:34
- *@Version 1.0
- */
 public class SwitchWindow {
     public static void main(String[] args) {
         WebDriver wd = new ChromeDriver();
