@@ -1,4 +1,4 @@
-package com.george.selenium;
+package com.george.selenium.junit5;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -9,8 +9,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 //使用JUnit测试套件
 @Suite
-@SelectClasses({HelloTest.class, CssSelectorTest.class})
-class SeleniumApplicationTests {
+@SelectClasses({SeleniumFirstTest.class, SeleniumSecondTest.class})
+class SeleniumTests {
     @ParameterizedTest
     @ValueSource(ints = {3, 17, 8, 11, 9})
     void testPrintNumber(int num) {
